@@ -1,0 +1,25 @@
+{
+    "name": "csi0n/zmop",
+    "type": "library,composer-plugin",
+    "require": {
+        "php-curl-class/php-curl-class": "^7.3",
+        "pimple/pimple": "^3.1"
+    },
+    "authors": [
+        {
+            "name": "csi0n",
+            "email": "chqssqll@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files":[
+            "src/Helpers/helpers.php"
+        ],
+        "psr-4": {
+            "csi0n\\ZMop\\": "src/"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^3.3"
+    }
+}

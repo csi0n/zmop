@@ -10,6 +10,7 @@ namespace csi0n\ZMop\Foundation;
 
 
 use csi0n\ZMop\Foundation\ServiceProviders\AuthServiceProvider;
+use csi0n\ZMop\Foundation\ServiceProviders\CertificationServiceProvider;
 use csi0n\ZMop\Foundation\ServiceProviders\EncryptionServiceProvider;
 use csi0n\ZMop\Foundation\ServiceProviders\IvsServiceProvider;
 use csi0n\ZMop\Foundation\ServiceProviders\ScoreServiceProvider;
@@ -23,7 +24,8 @@ class Application extends Container
         EncryptionServiceProvider::class,
         IvsServiceProvider::class,
         ScoreServiceProvider::class,
-        WatchListServiceProvider::class
+        WatchListServiceProvider::class,
+        CertificationServiceProvider::class
     ];
 
     /**

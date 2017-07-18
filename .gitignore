@@ -2,3 +2,6 @@
 vendor
 .idea
 composer.lock
+rsa_public_key.pem
+rsa_private_key.pem
+index.php

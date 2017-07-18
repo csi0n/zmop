@@ -44,8 +44,13 @@ abstract class BaseRepository
      */
     public function __construct(Container $application)
     {
-        $this->sys_attributes = array_merge(
-            $this->sys_attributes, $application['config']);
+        foreach ($application['config'] as $k => $v) {
+            foreach ($this->sys_attributes as $kk => &$vv) {
+                if ($k === $kk) {
+                    $vv = $v;
+                }
+            }
+        }
 
         $this->application = $application;
     }

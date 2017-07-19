@@ -39,14 +39,6 @@ class Application extends Container
         $this->registerProviders();
     }
 
-
-    private function registerProviders()
-    {
-        foreach ($this->providers as $provider) {
-            $this->register(new $provider());
-        }
-    }
-
     public function __get($name)
     {
         return $this->offsetGet($name);
@@ -57,5 +49,10 @@ class Application extends Container
         $this->offsetSet($name, $value);
     }
 
-
+    private function registerProviders()
+    {
+        foreach ($this->providers as $provider) {
+            $this->register(new $provider());
+        }
+    }
 }

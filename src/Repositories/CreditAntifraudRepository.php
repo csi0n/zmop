@@ -61,6 +61,12 @@ class CreditAntifraudRepository extends BaseRepository {
 		return $this;
 	}
 
+	public function risk(){
+		$this->method='zhima.credit.antifraud.risk.list';
+		$this->biz_attributes['product_code']='w1010100003000001283';
+		return $this;
+	}
+
 	public function get( $transactionId = '' ) {
 		if ( ! empty( $transactionId ) ) {
 			$this->biz_attributes['transaction_id'] = $transactionId;

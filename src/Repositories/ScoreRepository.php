@@ -49,6 +49,6 @@ class ScoreRepository extends BaseRepository
     public function score($open_id = '', $transaction_id = '')
     {
         $result = $this->query($open_id, $transaction_id);
-        return intval($result['zm_score']);
+        return isset($result['zm_score'])?intval($result['zm_score']):false;
     }
 }
